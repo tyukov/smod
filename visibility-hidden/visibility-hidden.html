@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visibility hidden</title>
+  <link rel="stylesheet" href="../btn/css/btn.css">
+  <link rel="stylesheet" href="visibility-hidden.css">
+  <style>
+    body {
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      padding: 1em;
+      background-color: #f9faff;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .example {
+    padding: 1.5rem;
+    border: .2rem solid #f8f9fa;
+    margin-bottom: 0;
+    }
+</style>
+</head>
+<body>
+<a class="btn btn_theme_sky btn_size_m visibility-hidden visibility-hidden_show_focus" href="#main" role="button" tabindex="1"><span class="btn__text">Skip to main content</span></a>
+<header>
+  <nav>
+    <a href="#">One</a>
+    <a href="#">Two</a>
+    <a href="#">Three</a>
+</nav>
+</header>
+<main id="main">
+ <h3>Visibility hidden – press to tab button on your keyboard</h3>
+  <p>Use JS method because the anchor appears in the link when we use "Skip to main content": (example.com#main) instead (example.com).</p>
+  <nav>
+    <a href="#">One</a>
+    <a href="#">Two</a>
+    <a href="#">Three</a>
+  </nav>
+</main>
+</body>
+</html>
+

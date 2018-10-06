@@ -1,0 +1,34 @@
+
+
+
+
+/**
+ * Theme Name: smod visibility hidden
+ * Description: Hidden element but keep the capabilities
+ * of the screen readers
+ * Version: 1
+ */
+
+/** 
+ * Improvement:
+ *
+ * 1. Use JS method because the anchor appears in the link
+ * when we use "Skip to main content":
+ * (example.com#main) instead (example.com).
+ *
+ *
+ */
+
+.visibility-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+}
+
+.visibility-hidden_show_focus:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  z-index: 20;
+}
