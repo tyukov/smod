@@ -1,0 +1,647 @@
+
+
+/**
+ * Theme Name: smod buttons
+ * Description: Custom button styles 
+ * Author: Dmitriy Tyukov
+ * Version: 1
+ */
+
+
+/** 
+ * Improvement:
+ *
+ * 1. Different focus on devices 
+ * 
+ * https://github.com/ten1seven/what-input
+ * A global utility for tracking the current input method 
+ * (mouse/pointer, keyboard or touch).
+ *
+ *
+ * https://ru.bem.info/_st_/bem-components-examples/6.0.0/desktop/button/G3KTdF3OLVr2JeuOmIqmVBNLMz8.ru.html
+ * Yandex method (bem components)
+ *
+ */
+
+/** 
+ * How to use:
+ *
+ * 
+ *
+ */
+
+/*FIX
+1. appearance delete on 62 line
+*/
+
+/**
+ * Define standard rules for buttons.
+ * 1. Remove standard button tag styles.
+ * 2. Remove, because see.Improvement(1), temporarily solved by using css method.
+ * 3. Requires changes in the future in the direction of the "cubic-bezier".
+ * 4. The appearance property is used to display an element using a platform-native
+ * styling based on the users' operating system's theme.
+ */
+
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0; /* 1 */
+  text-align: center;
+  text-decoration: none;
+  border: 0; /* 1 */
+  outline: 0; /* 2 */
+  white-space: nowrap;
+  cursor: pointer; 
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; /* 3 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; /* 4 */
+}
+
+/*
+.btn:not(:disabled):not(.btn_state_disabled) {
+    cursor: pointer;
+}
+*/
+
+/**
+ * Spacing in button text.
+ * 1. Remove delete if don't needs.
+ * styling based on the users' operating system's theme.
+ */
+
+.btn__text {
+/* 1
+  position: relative;
+  overflow: hidden;
+  vertical-align: top; */
+  display: inline-block;
+}
+
+.btn_wide {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Buttons sizes and spasing.
+ * 1. Clean the cascades, but the overall styles
+ * I'll watch it.
+ */
+
+.btn_size_s .btn__text {
+    margin: 0 .5rem;
+}
+
+.btn_size_m .btn__text {
+    margin: 0 1rem;
+}
+
+.btn_size_l .btn__text {
+    margin: 0 2.5rem;
+}
+
+.btn_size_s {
+  font-size: .875rem;
+  line-height: 1.75rem;
+}
+
+.btn_size_m {
+  font-size: 1rem;
+  line-height: 2.375rem;
+}
+
+.btn_size_l {
+  font-size: 1.125rem;
+  line-height: 3.5rem;
+}
+
+/**
+ * 1.1 Theme: Sky – blue button.
+ * 2.1 Theme: Leafy – green button.
+ * 3.1 Theme: Ruddy – red button.
+ * 4.1 Theme: Lilack – violet button.
+ * 5.1 Theme: Amber – yellow button.
+ * 6.1 Theme: Black – black button.
+ * 7.1 Theme: Grap – gray button.
+ * 8.1 Theme: Link – link button.
+ * Button States
+
+ * ====
+
+ * 1.2 Theme: Outline-Sky – outline-blue button.
+ * 2.2 Theme: Outline-Leafy – outline-green button.
+ * 3.2 Theme: Outline-Ruddy – outline-red button.
+ * 4.2 Theme: Outline-Lilack – outline-violet button.
+ * 5.2 Theme: Outline-Amber – outline-yellow button.
+ * 6.2 Theme: Outline-Black – outline-black button.
+ * 7.2 Theme: Outline-Grap – outline-gray button.
+ * Button States
+
+ * ====
+
+ * 1.3 Theme: Soft-Sky – soft-blue button.
+ * 2.3 Theme: Soft-Leafy – soft-green button.
+ * 3.3 Theme: Soft-Ruddy – soft-red button.
+ * 4.3 Theme: Soft-Lilack – soft-violet button.
+ * 5.3 Theme: Soft-Amber – soft-yellow button.
+ * 6.3 Theme: Soft-Black – soft-black button.
+ * Button States
+
+/**
+ * 1.1 Sky/Blue
+ */
+
+.btn_theme_sky {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #3a8bbb;
+  border-radius: .4375rem;
+}
+
+.btn_theme_sky:hover {
+  background-color: #31769f;
+}
+
+.btn_theme_sky:focus {
+  box-shadow: 0 0 0 1px #31769f;
+}
+
+/**
+ * 1.2 Outline-Sky/Outline-Blue
+ */
+
+.btn_theme_outline-sky {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #3a8bbb;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #3a8bbb;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-sky:hover {
+  color: #1e6189;
+}
+
+.btn_theme_outline-sky:focus {
+  box-shadow: inset 0 0 0 1px #3a8bbb, 0 0 0 1px #3a8bbb;
+}
+
+/**
+ * 1.3 Soft-Sky/Blue
+ */
+
+.btn_theme_soft-sky {
+  font-family: sans-serif;
+  font-size: 400;
+  color: #3f84ec;
+  background-color: #eff6ff;
+  border-radius: .4375rem;
+}
+
+.btn_theme_soft-sky:hover {
+  background-color: #3f84ec;
+  color: #fff;
+}
+
+.btn_theme_soft-sky:focus {
+  box-shadow: 0 0 0 1px #31769f;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_sky.btn_state_active {
+  background-color: #1e6189;
+}
+
+/**
+ * 2.1 Leafy/Green
+ */
+
+.btn_theme_leafy {
+  font-family: sans-serif;
+  font-size: 400;
+  color: #fff;
+  background-color: #5fcf80;
+  border-radius: .4375rem;
+}
+
+.btn_theme_leafy:hover {
+  background-color: #3ac162;
+}
+
+.btn_theme_leafy:focus {
+  box-shadow: 0 0 0 1px #3ac162;
+}
+
+/**
+ * 2.2 Outline-Leafy/Outline-Green
+ */
+
+.btn_theme_outline-leafy {
+  font-family: sans-serif;
+  font-size: 400;
+  color: #5fcf80;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #5fcf80;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-leafy:hover {
+  color: #3ac162;
+  box-shadow: inset 0 0 0 1px #3ac162;
+}
+
+.btn_theme_outline-leafy:focus {
+  box-shadow: inset 0 0 0 1px #3ac162, 0 0 0 1px #3ac162;
+}
+
+/**
+ * 2.3 Soft-Leafy/Green
+ */
+
+.btn_theme_soft-leafy {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #00c9a7;
+  background-color: rgba(0, 201, 167, 0.1);
+  border-radius: .4375rem;
+}
+
+.btn_theme_soft-leafy:hover {
+  background-color: #00c9a7;
+  color: #fff;
+}
+
+.btn_theme_soft-leafy:focus {
+  box-shadow: 0 0 0 1px #3ac162;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_leafy.btn_state_active {
+  background-color: #3bb85a;
+}
+
+/**
+ * 3.1 Ruddy/Red
+ */
+
+.btn_theme_ruddy {
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: 400;
+  background-color: #e35d6a;
+  border-radius: .4375rem;
+}
+
+.btn_theme_ruddy:hover {
+  background-color: #dc3545;
+}
+
+.btn_theme_ruddy:focus {
+  box-shadow: 0 0 0 1px #dc3545;
+}
+
+/**
+ * 3.2 Outline-Ruddy/Outline-Red
+ */
+
+.btn_theme_outline-ruddy {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #e35d6a;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #e35d6a;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-ruddy:hover {
+  color: #dc3545;
+  box-shadow: inset 0 0 0 1px #dc3545;
+}
+
+.btn_theme_outline-ruddy:focus {
+  box-shadow: inset 0 0 0 1px #dc3545, 0 0 0 1px #dc3545;
+}
+
+
+/**
+ * 3.3 Soft-Ruddy/Red
+ */
+
+.btn_theme_soft-ruddy {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #de4437;
+  background-color: rgba(222, 68, 55, 0.1);
+  border-radius: .4375rem;
+}
+
+.btn_theme_soft-ruddy:hover {
+  background-color: #de4437;
+  color: #fff;
+}
+
+.btn_theme_soft-ruddy:focus {
+  box-shadow: 0 0 0 1px #dc3545;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_ruddy.btn_state_active {
+  background-color: #dc3545;
+}
+
+/**
+ * 4.1 Lilac/Violet
+ */
+
+.btn_theme_lilac {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #7952B3;
+  border-radius: .4375rem;
+}
+
+.btn_theme_lilac:hover {
+  background-color: #614092;
+}
+
+.btn_theme_lilac:focus {
+  box-shadow: 0 0 0 1px #614092;
+}
+
+/**
+ * 4.2 Outline-Lilac/Outline-Violet
+ */
+
+.btn_theme_outline-lilac {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #7952B3;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #7952B3;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-lilac:hover {
+  color: #614092;
+  box-shadow: inset 0 0 0 1px #614092;
+}
+
+.btn_theme_outline-lilac:focus {
+  box-shadow: inset 0 0 0 1px #614092, 0 0 0 1px #614092;
+}
+
+/**
+ * 4.2 Soft-Lilac/Violet
+ */
+
+.btn_theme_soft-lilac {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #7952B3;
+  background-color: rgba(121, 82, 179, 0.1);
+  border-radius: .4375rem;
+}
+
+.btn_theme_soft-lilac:hover {
+  background-color: #7952B3;
+  color: #fff;
+}
+
+.btn_theme_soft-lilac:focus {
+  box-shadow: 0 0 0 1px #614092;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_lilac.btn_state_active {
+  background-color: #614092;
+}
+
+/**
+ * 5.1 Amber/Yellow
+ */
+
+.btn_theme_amber {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #222;
+  background-color: #ffdb4d;
+  border-radius: .4375rem;
+}
+
+.btn_theme_amber:hover {
+  background-color: #ffd633;
+}
+
+.btn_theme_amber:focus {
+  box-shadow: 0 0 0 1px #ffd633;
+}
+
+/**
+ * 5.2 Outline-Amber/Outline-Yellow
+ */
+
+.btn_theme_outline-amber {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #ffdb4d;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #ffdb4d;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-amber:hover {
+  color: #ffd633;
+  box-shadow: inset 0 0 0 1px #ffdb4d;
+}
+
+.btn_theme_outline-amber:focus {
+  box-shadow: inset 0 0 0 1px #ffdb4d, 0 0 0 1px #ffdb4d;
+}
+
+/**
+ * 5.3 Soft-Amber/Yellow
+ */
+
+.btn_theme_soft-amber {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #222;
+  background-color: rgba(255, 219, 77, 0.3);
+  border-radius: .4375rem;
+}
+
+.btn_theme_soft-amber:hover {
+  background-color: #ffd633;
+}
+
+.btn_theme_soft-amber:focus {
+  box-shadow: 0 0 0 1px #ffd633;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_amber.btn_state_active {
+  background-color: #ffd633;
+}
+
+/**
+ * 6.1 Black/Black
+ */
+
+.btn_theme_black {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #444;
+  border-radius: .4375rem;
+}
+
+.btn_theme_black:hover {
+  background-color: #222;
+}
+
+.btn_theme_black:focus {
+  box-shadow: 0 0 0 1px #222;
+}
+
+/**
+ * 6.2 Outline-Black/Outline-Black
+ */
+
+.btn_theme_outline-black {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #444;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #444;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-black:hover {
+  color: #222;
+  box-shadow: inset 0 0 0 1px #222;
+}
+
+.btn_theme_outline-black:focus {
+  box-shadow: inset 0 0 0 1px #222, 0 0 0 1px #222;
+}
+
+/**
+ * 6.3 Soft-Black/Black
+ */
+
+.btn_theme_soft-black {
+  font-family: sans-serif;
+  color: #222;
+  background-color: rgba(68, 68, 68, 0.1);
+  border-radius: .4375rem;
+}
+
+.btn_theme_soft-black:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn_theme_soft-black:focus {
+  box-shadow: 0 0 0 1px #222;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_black.btn_state_active {
+  background-color: #222;
+}
+
+/**
+ * 7.1 Grab/Gray
+ */
+
+.btn_theme_grab {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #6c757d;
+  background-color: #E9EEF2;
+  border-radius: .4375rem;
+}
+
+.btn_theme_grab:hover {
+  background-color: #d9e2e9;
+}
+
+.btn_theme_grab:focus {
+  box-shadow: 0 0 0 1px #d9e2e9;
+}
+
+/**
+ * 7.1 Outline-Grab/Outline-Gray
+ */
+
+.btn_theme_outline-grab {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #6c757d;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #6c757d;
+  border-radius: .4375rem;
+}
+
+.btn_theme_outline-grab:hover {
+  box-shadow: inset 0 0 0 1px #d9e2e9;
+}
+
+.btn_theme_outline-grab:focus {
+  box-shadow: inset 0 0 0 1px #d9e2e9, 0 0 0 1px #d9e2e9;
+}
+
+/**
+ * Button states
+ */
+
+.btn_theme_grab.btn_state_active {
+  background-color: #d9e2e9;
+}
+
+/**
+ * 8. Link/Tranparent
+ */
+
+.btn_theme_link {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #3a8bbb;
+  border-radius: .4375rem;
+}
+
+.btn_theme_link:hover,
+.btn_theme_link:focus {
+  color: #1e6189;
+}
+
+.btn_state_disabled {
+    opacity: .45;
+    pointer-events: none
+}
