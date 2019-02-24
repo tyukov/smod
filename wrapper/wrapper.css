@@ -1,0 +1,36 @@
+
+
+
+
+/**
+ * Theme Name: smod 
+ * Description: 
+ * Version: 1
+ */
+
+/** 
+ * Improvement:
+ *
+ * 1. 
+ *
+ *
+ */
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 8vw;
+  position: relative;
+}
+
+@media (min-width:48rem) {
+  .wrapper {
+    padding:0 4vw
+  }
+}
+
+@media (min-width: 84.875rem) {
+.wrapper {
+    max-width: 76.875rem;
+    padding: 0;
+}
+}
