@@ -29,7 +29,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+/* NEED CHANGE */
 .header__visually-hidden {
   position: absolute;
   width: 1px;
