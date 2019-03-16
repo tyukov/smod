@@ -1,9 +1,21 @@
+/**
+ * Add the correct box sizing in all browsers.
+ */
+
 *,
 *::before,
 *::after {
  -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
          box-sizing: border-box;
+}
+
+/**
+ * Use own focus style in all browsers.
+ */
+
+:focus {
+    outline-color: #eeb523;
 }
 
 /**
@@ -19,4 +31,25 @@
  -webkit-text-size-adjust: 100%; /* 1 */
      -ms-text-size-adjust: 100%;
          text-size-adjust: 100%;
+}
+
+/**
+ * Instead (ul, ol, dl) tags for the cascade.
+ * Remove the basics style in all browsers.
+ */
+
+.list {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+/**
+ * Wrap provide a means to center and horizontally pad contents.
+ */
+
+.wrap {
+ max-width: 76.875rem;
+ margin: 0 auto;
+ padding: 0 1rem;
 }
