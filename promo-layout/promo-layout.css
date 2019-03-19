@@ -63,11 +63,8 @@
 }
 
 .promo-message_theme_sky .promo__background {
- background: #4d6dc3 url(https://a.slack-edge.com/e1a1f/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png) center top repeat /1300px 700px;
-/*
- background-repeat: repeat;
+ background: #4d6dc3 url(https://a.slack-edge.com/e1a1f/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png) center top repeat;
  background-size: 1300px 700px;
-*/
 }
 
 .promo__background {
