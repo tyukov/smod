@@ -1,0 +1,133 @@
+
+
+
+
+/**
+ * Theme Name: Promo Layout 
+ * Description: 
+ * Version: 1
+ */
+
+/** 
+ * Improvement:
+ *
+ * 1. 
+ *
+ *
+ */
+
+.promo {
+ position: relative;
+}
+
+.promo-message {
+ padding-top: 7rem;
+ padding-bottom: 3rem;
+}
+
+.promo-message .promo__content {
+ position: relative;
+ margin: 0 auto;
+ padding: 0 1rem;
+}
+
+.promo-message_theme_sky .promo-header {
+ color: #f5f5f5;
+ text-shadow: 0 0 1px rgba(0,0,0,.1);
+}
+
+.promo-message .promo-header__title {
+ color: inherit;
+ font-size: 2rem;
+ line-height: 1.12;
+ max-width: 14em; /* Custom for own project */
+ margin: 0 0 1rem;
+}
+
+.promo-header__btn {
+ border-radius: .125rem;
+ background-color: rgba(255,255,255,.86);
+}
+
+.promo-header__btn:hover {
+ background-color: #fff;
+}
+
+.promo-message_theme_sky .promo-header__text {
+ max-width: 48rem; /* Custom for own project */
+ color: inherit;
+ line-height: 1.6;
+ font-size: 1.125rem;
+ margin: 0 0 1rem;
+}
+
+.promo-message_theme_sky .promo__background {
+ background: #4d6dc3 url(https://a.slack-edge.com/e1a1f/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png) center top repeat /1300px 700px;
+/*
+ background-repeat: repeat;
+ background-size: 1300px 700px;
+*/
+}
+
+.promo__background {
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ z-index: -1;
+}
+
+.promo-illustration {
+ margin-top: 3rem;
+ font-size: 0;
+ line-height: inherit;
+}
+
+.promo-illustration_type_dangles .promo-illustration__img {
+ max-width: 100%;
+ margin-bottom: -16rem;
+ box-shadow: 0 0 2rem rgba(0,0,0,.1)
+}
+
+/* MEDIA */
+
+@media (min-width: 25rem) {
+ .promo-message .promo-header__title {
+   font-size: calc(2rem + (100vw - 25rem)/39);
+ }
+ .promo-message .promo-header__text {
+   font-size: calc(1.125rem + (100vw - 25rem)/312);
+ }
+}
+
+@media (min-width: 48rem) {
+ .promo-message {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+ }
+ .promo-message .promo__content {
+  text-align: center;
+ }
+ .promo-message .promo-header__title {
+  margin: 0 auto 1.5rem;
+ }
+ .promo-message .promo-header__text {
+  margin: 0 auto 1rem;
+ }
+}
+
+@media (min-width: 64rem) {
+ .promo-message .promo-header__title {
+   font-size: 3rem;
+ }
+ .promo-message .promo-header__text {
+   font-size: 1.25rem;
+ }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+ .promo-message_theme_sky .promo__background {
+  background-image: url(https://a.slack-edge.com/73e3f1/spacesuit/source/images/backgrounds/bg-halftone-black-20p@2x.png);
+ }
+}
