@@ -49,7 +49,27 @@
  */
 
 .wrap {
- max-width: 76.875rem;
  margin: 0 auto;
- padding: 0 1rem;
+ padding: 0 1.25rem;
 }
+
+@media (min-width: 20rem) {
+ .wrap {
+  padding: 0 calc(20px + (5 * (100vw - 320px)/ 224));
+ }
+}
+
+@media (min-width: 48rem) {
+ .wrap {
+  padding: 0 1.875rem;
+ }
+}
+
+@media (min-width: 80.625rem) {
+ .wrap {
+  max-width: 76.875rem;
+  padding: 0;
+ }
+}
+
+/*padding: 0 calc(20px + (5 * (100vw - 320px)/ 224)); 1230*/
