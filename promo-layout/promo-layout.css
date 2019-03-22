@@ -20,19 +20,23 @@
  position: relative;
 }
 
+.promo_theme_sky {
+ background: #4d6dc3 url(https://a.slack-edge.com/e1a1f/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png) center top repeat;
+ background-size: 1300px 700px;
+}
+
 .promo-message {
  padding-top: 7rem;
  padding-bottom: 3rem;
 }
 
-.promo-message .promo__content {
- position: relative;
+.promo .promo__content {
+ position: relative; /* position и z-index на пересмотр после создания всех promo, потому что этот код нужен был в старой версии promo */
  z-index: 10;
  margin: 0 auto;
- padding: 0 1rem;
 }
 
-.promo-message_theme_sky .promo-header {
+.promo_theme_sky .promo-header {
  color: #f5f5f5;
  text-shadow: 0 0 1px rgba(0,0,0,.1);
 }
@@ -45,28 +49,39 @@
  margin: 0 0 1rem;
 }
 
-.promo-header__btn {
- border-radius: .125rem;
- background-color: rgba(255,255,255,.86);
-}
-
-.promo-header__btn:hover {
- background-color: #fff;
-}
-
-.promo-message_theme_sky .promo-header__text {
+.promo-message .promo-header__text {
  max-width: 48rem; /* Custom for own project */
  color: inherit;
  line-height: 1.6;
  font-size: 1.125rem;
  margin: 0 0 1rem;
 }
-
-.promo-message_theme_sky .promo__background {
- background: #4d6dc3 url(https://a.slack-edge.com/e1a1f/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png) center top repeat;
- background-size: 1300px 700px;
+/* Показательный материал, рудимент, который может удалиться */
+/*
+.promo-header__btn {
+ border-radius: .125rem;
+ background-color: rgba(255,255,255,.86);
+ display: block;
+ width: 100%;
 }
+*/
+/* Показательный материал, рудимент, который может удалиться */
+/*
+@media (min-width: 48rem) {
+ .promo-header__btn {
+  width: auto;
+  display: inline-block
+ }
+}
+*/
+/* Показательный материал, рудимент, который может удалиться */
+/*
+.promo-header__btn:hover {
+ background-color: #fff;
+}
+*/
 
+/* Старый элемент, может понадобиться в picture, img манипуляциях
 .promo__background {
  position: absolute;
  top: 0;
@@ -74,11 +89,10 @@
  bottom: 0;
  left: 0;
 }
+*/
 
 .promo-illustration {
- margin-top: 3rem;
- font-size: 0;
- line-height: inherit;
+ display: none;
 }
 
 .promo-illustration_type_dangles .promo-illustration__img {
@@ -112,6 +126,12 @@
  .promo-message .promo-header__text {
   margin: 0 auto 1rem;
  }
+ .promo-message .promo-illustration {
+  display: block;
+  margin-top: 3rem;
+  font-size: 0;
+  line-height: inherit;
+ }
 }
 
 @media (min-width: 64rem) {
@@ -124,7 +144,80 @@
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
- .promo-message_theme_sky .promo__background {
+ .promo_theme_sky {
   background-image: url(https://a.slack-edge.com/73e3f1/spacesuit/source/images/backgrounds/bg-halftone-black-20p@2x.png);
  }
+}
+
+/**/
+
+.promo-billboard {
+ padding-top: 10rem;
+ padding-bottom: 5rem;
+}
+
+.promo-billboard .promo__content {
+ display: grid;
+ grid-template-columns: 40% 55%;
+ grid-gap: 5%;
+ align-items: center
+}
+
+.promo-illustrations__illustrations {
+ max-width: 100%;
+}
+
+.promo-billboard .promo-header__title {
+ color: inherit;
+ font-size: 2rem;
+ line-height: 1.12;
+ margin: 0 0 1rem;
+}
+
+.promo-billboard .promo-header__text {
+ color: inherit;
+ line-height: 1.6;
+ font-size: 1.125rem;
+ margin: 0 0 1rem;
+}
+
+@media (min-width: 25rem) {
+ .promo-billboard .promo-header__title {
+   font-size: calc(2rem + (100vw - 25rem)/39);
+ }
+ .promo-billboard .promo-header__text {
+   font-size: calc(1.125rem + (100vw - 25rem)/312);
+ }
+}
+
+@media (min-width: 64rem) {
+ .promo-billboard .promo-header__title {
+   font-size: 3rem;
+ }
+ .promo-billboard .promo-header__text {
+   font-size: 1.25rem;
+ }
+}
+
+@supports (display:grid) and (grid-template-columns: 40% 55%) and (grid-gap: 5%) {
+ .promo-billboard .promo__content {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: 40% 55%;
+  align-items: center
+ }
+}
+
+@supports not ((display:grid) and (grid-template-columns: 40% 55%) and (grid-gap: 5%)) {
+ .promo-billboard .promo__content {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .promo-billboard .promo-header {
+  flex-basis: 40%;
+  margin-right: 5%;
+}
+ .promo-billboard .promo-illustrations {
+  flex-basis: 55%;
+}
 }
