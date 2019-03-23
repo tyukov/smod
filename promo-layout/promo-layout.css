@@ -11,7 +11,7 @@
 /** 
  * Improvement:
  *
- * 1. 
+ * 1. promo__background – для picture, img, svg tags
  *
  *
  */
@@ -31,8 +31,6 @@
 }
 
 .promo .promo__content {
- position: relative; /* position и z-index на пересмотр после создания всех promo, потому что этот код нужен был в старой версии promo */
- z-index: 10;
  margin: 0 auto;
 }
 
@@ -58,40 +56,11 @@
 }
 /* Показательный материал, рудимент, который может удалиться */
 /*
-.promo-header__btn {
- border-radius: .125rem;
- background-color: rgba(255,255,255,.86);
- display: block;
- width: 100%;
-}
-*/
-/* Показательный материал, рудимент, который может удалиться */
-/*
-@media (min-width: 48rem) {
- .promo-header__btn {
-  width: auto;
-  display: inline-block
- }
-}
-*/
-/* Показательный материал, рудимент, который может удалиться */
-/*
-.promo-header__btn:hover {
- background-color: #fff;
-}
+.promo-header__btn{border-radius: .125rem;background-color: rgba(255,255,255,.86);}
+.promo-header__btn:hover{background-color: #fff;}
 */
 
-/* Старый элемент, может понадобиться в picture, img манипуляциях
-.promo__background {
- position: absolute;
- top: 0;
- right: 0;
- bottom: 0;
- left: 0;
-}
-*/
-
-.promo-illustration {
+.promo_theme_sky .promo-illustration {
  display: none;
 }
 
@@ -149,22 +118,20 @@
  }
 }
 
-/**/
+/*billboard*/
 
 .promo-billboard {
- padding-top: 10rem;
- padding-bottom: 5rem;
+ padding-top: 7rem;
+ padding-bottom: 3rem;
 }
 
-.promo-billboard .promo__content {
- display: grid;
- grid-template-columns: 40% 55%;
- grid-gap: 5%;
- align-items: center
+.promo-billboard .promo-header {
+ margin: 0 0 2rem;
 }
 
-.promo-illustrations__illustrations {
+.promo-billboard .promo-illustration__img {
  max-width: 100%;
+ width: 100%;
 }
 
 .promo-billboard .promo-header__title {
@@ -190,6 +157,34 @@
  }
 }
 
+@media (min-width: 35rem) and (max-width: 47.9375rem) {
+ .promo-billboard .promo__content {
+  max-width: 35rem
+ }
+}
+
+@media (min-width: 48rem) {
+ .promo-billboard {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+ }
+ .promo-billboard .promo__content {
+  display: flex;
+  align-items: center
+}
+ .promo-billboard .promo-header {
+  flex-basis: 40%;
+  max-width: 40%;
+  margin: 0 5% 0 0;
+}
+ .promo-billboard .promo-illustration {
+  flex-basis: 55%;
+  max-width: 55%;
+  font-size: 0;
+  line-height: inherit;
+}
+}
+
 @media (min-width: 64rem) {
  .promo-billboard .promo-header__title {
    font-size: 3rem;
@@ -197,27 +192,4 @@
  .promo-billboard .promo-header__text {
    font-size: 1.25rem;
  }
-}
-
-@supports (display:grid) and (grid-template-columns: 40% 55%) and (grid-gap: 5%) {
- .promo-billboard .promo__content {
-  display: grid;
-  grid-gap: 5%;
-  grid-template-columns: 40% 55%;
-  align-items: center
- }
-}
-
-@supports not ((display:grid) and (grid-template-columns: 40% 55%) and (grid-gap: 5%)) {
- .promo-billboard .promo__content {
-  display: flex;
-  flex-wrap: wrap;
- }
- .promo-billboard .promo-header {
-  flex-basis: 40%;
-  margin-right: 5%;
-}
- .promo-billboard .promo-illustrations {
-  flex-basis: 55%;
-}
 }
