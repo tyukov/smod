@@ -1,17 +1,13 @@
-
-
-
-
-/**
+/*
  * Theme Name: Promo Layout 
- * Description: 
+ * Description: none
  * Version: 1
  */
 
-/** 
+/*
  * Improvement:
  *
- * 1. promo__background – для picture, img, svg tags
+ * 1. Create promo__background (or promo-background) for custom picture, img, svg tags.
  *
  *
  */
@@ -54,13 +50,13 @@
  font-size: 1.125rem;
  margin: 0 0 1rem;
 }
-/* Показательный материал, рудимент, который может удалиться */
 /*
+ Показательный материал, рудимент, который может удалиться 
 .promo-header__btn{border-radius: .125rem;background-color: rgba(255,255,255,.86);}
 .promo-header__btn:hover{background-color: #fff;}
 */
 
-.promo_theme_sky .promo-illustration {
+.promo-message .promo-illustration {
  display: none;
 }
 
@@ -70,8 +66,9 @@
  box-shadow: 0 0 2rem rgba(0,0,0,.1)
 }
 
-/* MEDIA */
-
+/*
+ * MEDIA: Promo-Message
+ */
 @media (min-width: 25rem) {
  .promo-message .promo-header__title {
    font-size: calc(2rem + (100vw - 25rem)/39);
@@ -118,7 +115,9 @@
  }
 }
 
-/*billboard*/
+/*
+ * Promo-Billboard
+ */
 
 .promo-billboard {
  padding-top: 7rem;
@@ -148,6 +147,9 @@
  margin: 0 0 1rem;
 }
 
+/*
+ * MEDIA: Promo-Billboard
+ */
 @media (min-width: 25rem) {
  .promo-billboard .promo-header__title {
    font-size: calc(2rem + (100vw - 25rem)/39);
